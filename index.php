@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <main>
-        <section class="login container position-relative ">
-            <div class="position-absolute top-50 start-50 translate-middle login-bg py-5 px-5">
+    <main class="container position-relative">
+        <section class="login position-absolute top-50 start-50 translate-middle login-bg py-5 px-5">
+            <div class="">
                     <h2 class="text-center font-weight-bold">Logar no Sistema</h2>
                     <form action="" class="justify-content-center">
                         <input type="text" name="user" id="user" placeholder="Usuário" class="d-flex justify-content-center my-3 input-login">
