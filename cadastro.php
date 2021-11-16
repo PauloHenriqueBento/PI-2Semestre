@@ -7,13 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
         crossorigin="anonymous">
+    <link rel="stylesheet" href="style/cadastro-maquina.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-primary bg-primary">
+        <nav class="navbar navbar-expand-md navbar-primary bg-primary menu">
             <div class="container-fluid container">
-                <a class="navbar-brand" href="#">Logo</a>
-                <h1 class="text-white">Nome empresa</h1>
+                <a class="navbar-brand" href="#"><img src="image/logo.png" class="logo"></a>
+                <h1 class="text-white">Active</h1>
                 <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#expandir" 
                     aria-controls="expandir" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -39,34 +40,44 @@
     </header>
     <main class="container">
         <h2 class="d-flex justify-content-center mt-4">Cadastro</h2>
-        <form class="pt-1">
+        <form method="post" action="#" class="pt-1">
             <label for="nome" class="mt-2">Nome completo</label>
-            <input class="form-control p-2" id="nome" type="text" placeholder="Nome completo" required></input>
+            <input class="form-control p-2 mt-1 inputs" id="nome" type="text" required>
 
-            <label for="RG" class="mt-2">RG</label>
-            <input class="form-control p-2" id="rg" type="text" placeholder="CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \ required></input>
+            <section class="row">
+                <div class="col">
+                    <label for="RG" class="mt-2">RG</label>
+                    <input class="form-control p-2 mt-1 inputs" id="rg" type="text" pattern="\d{1,2}\.\d{3}\.\d{3}-\d{2}" \ required>
+                </div>
 
-            <label for="cpf" class="mt-2">CPF</label>
-            <input class="form-control p-2" id="cpf" type="text" placeholder="CPF" pattern="\d{2}\.\d{3}\.\d{3}-\d{2}" \ required></input>
-
-            <label for="dt-nasc" class="mt-2">Data de Nascimento</label>
-            <input class="form-control p-2" id="dt-nasc" type="date" placeholder="dd/mm/aaaa" maxlength="8" autocomplete="on" required></input>
-
-            <section class="form-check mt-2">
-                <input class="form-check-input" type="radio" name="sexo"></input>
-                <labe class="form-check-label" for="masculino">Masculino</label>
-            </section>
-            <section class="form-check mt-2">
-                <input class="form-check-input" type="radio" name="sexo"></input>
-                <labe class="form-check-label" for="feminino">Feminino</label>
-            </section>
-            <section class="form-floating mt-2">
-                <textarea class="form-control" placeholder="Observações"></textarea>
-                <label for="observacoes">Observações</label>
+                <div class="col">
+                    <label for="cpf" class="mt-2">CPF</label>
+                    <input class="form-control p-2 mt-1 inputs" id="cpf" type="text" pattern="\d{2}\.\d{3}\.\d{3}-\d{2}" \ required>
+                </div>    
             </section>
 
-            <input type="submit" value="enviar" class="btn btn-primary form-control p-2 mt-5 mb-3"></input>
+            <section class="row">
+                <section class="col">
+                    <label for="dt-nasc" class="mt-2">Data de Nascimento</label>
+                    <input class="form-control p-2 mt-1 inputs" id="dt-nasc" type="date" placeholder="dd/mm/aaaa" maxlength="8" autocomplete="on" required>
+                </section>
+
+                <section class="col d-flex align-items-end justify-content-center">
+                    <section class="form-check form-check-inline mt-2">
+                        <input class="form-check-input" type="radio" name="sexo"></input>
+                        <labe class="form-check-label" for="masculino">Masculino</label>
+                    </section>
+                    <section class="form-check form-check-inline mt-2">
+                        <input class="form-check-input" type="radio" name="sexo"></input>
+                        <labe class="form-check-label" for="feminino">Feminino</label>
+                    </section>
+                </section>
+
+                <div class="d-flex justify-content-center">
+                    <input type="button" value="enviar" class="btn text-white p-2 mt-5 mb-3 btn-lg botao">
+                </div>
         </form>
+        
     </main>
 </body>
 </html>
