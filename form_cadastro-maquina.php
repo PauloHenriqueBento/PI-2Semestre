@@ -44,32 +44,32 @@ include('verifica_session.php');
     </header>
     <main class="container">
     <h2 class="d-flex justify-content-center mt-4">Cadastro Máquinas</h2>
-        <form method="post" action="#" class="pt-3">
+        <form method="post" action="cadastrar-maquina.php" class="pt-3">
             <label for="serial" class="mt-1">Número de serial</label>
-            <input class="form-control p-2 inputs" id="serial" type="number" required></input>
+            <input class="form-control p-2 inputs" type="number" name="serial" id="serial" required></input>
 
             <section class="row">
                 <div class="col">
                     <label for="modelo" class="mt-2">Modelo</label>
-                    <input class="form-control p-2 inputs" id="modelo" type="text"required></input>
+                    <input class="form-control p-2 inputs" name="modelo"  type="text" id="modelo" required></input>
                 </div>
 
                 <div class="col">
                     <label for="fabricante" class="mt-2">Fabricante</label>
-                    <input class="form-control p-2 inputs" id="fabricante" type="text"required></input>
+                    <input class="form-control p-2 inputs" type="text" name="fabricante" id="fabricante" required></input>
                 </div>
             </section>
 
             <section class="row">
                 <div class="col">
-                    <label for="dt-cadastro" class="mt-2">Data Cadastro</label>
-                    <input class="form-control p-2 col inputs" id="dt-cadastro" type="date" placeholder="dd/mm/aaaa" 
+                    <label for="data" class="mt-2">Data Cadastro</label>
+                    <input class="form-control p-2 col inputs" type="date" name="data" id="data" placeholder="dd/mm/aaaa" 
                         maxlength="8" autocomplete="on" required></input>
                 </div>
 
                 <div class="col">
-                    <label for="sistema" class="mt-2">Sistema Operacional</label>
-                    <select class="form-select mt-1 inputs"  aria-label="Default select example">
+                    <label for="sistema_operacional" class="mt-2">Sistema Operacional</label>
+                    <select class="form-select mt-1 inputs" type="text" name="sistema_operacional" id="sistema_operacional" aria-label="Default select example">
                         <option>Selecione uma opção</option>
                             <option value="windows">Windows</option>
                             <option value="linux">Linux</option>
@@ -80,11 +80,11 @@ include('verifica_session.php');
 
             <section class="form-floating mt-3">
                 <label for="observacoes">Observações</label>
-                <textarea class="form-control inputs obs"></textarea>
+                <textarea class="form-control inputs obs" name="observacoes" id="observacoes"></textarea>
             </section>
 
             <div class="d-flex justify-content-center">
-                    <input type="button" value="enviar" class="btn text-white p-2 mt-5 mb-3 btn-lg botao">
+            <button type="submit" class="btn text-white p-2 mt-5 mb-3 btn-lg botao">Enviar</button>
             </div>
         </form>
     </main>
