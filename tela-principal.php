@@ -1,3 +1,7 @@
+<?php
+session_start();
+include('verifica_session.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,16 +13,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
         crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/cadastro-maquina.css">
     <link rel="stylesheet" href="style/telaPrincipal.css">
+    <link rel="stylesheet" href="style/usuario-cadastradoo.css">
 </head>
 <body>
-<header>
-        <nav class="navbar navbar-expand-md navbar-primary bg-primary menu">
-            <div class="container-fluid container">
-                <a class="navbar-brand" href="#"><img src="image/logo.png" class="logo"></a>
-                <h1 class="text-white">Active</h1>
-                <div class="collapse navbar-collapse d-flex justify-content-end" id="expandir">
+    <header>
+        <nav class="navbar navbar-expand-sm menu">
+            <div class="container-sm position-relative">
+                <div class="div-logo">
+                    <a class="navbar-brand" href="#"><img src="image/logo.png" class="logo"></a>
+                    <div class="div-titulo align-middle me-3">
+                        <h1 class="text-white">Active</h1>
+                    </div>
+                </div>
+
+                <div class="collapse navbar-collapse d-flex justify-content-end position-absolute end-0 me-5" id="expandir">
                     <button class="btn btn-secondary text-white">Logout</button>
                 </div>
             </div>
