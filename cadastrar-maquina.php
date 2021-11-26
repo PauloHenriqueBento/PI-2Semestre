@@ -20,7 +20,7 @@ $valores[':sistema_operacional'] = $_POST['sistema_operacional'];
 $valores[':observacoes'] = $_POST['observacoes'];
 
 if($stmt->execute($valores)){
-    echo "Gravado com sucesso";
+    header('Location: listar-maquina.php?gravado=1');
 } else {
     echo "<br><br> Erro, Nao consegui gravar no banco";
 }

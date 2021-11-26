@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('verifica_session.php');
+//include('verifica_session.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -85,6 +85,7 @@ include('verifica_session.php');
 
             <div class="d-flex justify-content-center">
             <button type="submit" class="btn text-white p-2 mt-5 mb-3 btn-lg botao">Enviar</button>
+            <button type="reset" class="btn text-white p-2 mt-5 mb-3 ms-2 btn-lg botao" onclick="location.href='listar-maquina.php'">Listar</button>
             </div>
         </form>
     </main>
