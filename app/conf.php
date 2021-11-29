@@ -1,10 +1,14 @@
 <?php
 
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'root');
+define('DB_HOST', 'localhost');
+define('DB_PORT', '3306');
 define('DB_NAME', 'pi_2');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 
-$mysqli = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME) or die('erro ao conectar');
+$bd_dsn = 'mysql:host=' . DB_HOST . ';port=' . DB_PORT . ';dbname=' . DB_NAME;
+$bd_user = DB_USER;
+$bd_pass = DB_PASS;
 
-?>
+//Conectamos com o banco MySQL
+$bd = new PDO($bd_dsn, $bd_user, $bd_pass);
