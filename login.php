@@ -19,7 +19,7 @@ $row = mysqli_num_rows($result);
 
 if($row == 1 ){
     $_SESSION['usuario'] = $usuario;
-    header('Location: form_cadastro.php');
+    header('Location: tela-principal.php');
     exit();
 } else{
     $_SESSION['nao_autenticado'] = true;
