@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('app/conf.php');
+include('app/conflogin.php');
 
 //Redireciona o usuário de volta a tela inicial, caso tnte acessar ilegalmente
 if(empty($_POST['usuario']) || empty($_POST['senha'])){

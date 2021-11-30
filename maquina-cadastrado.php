@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('verifica_session.php');
+//Juntar o listar-maquina.php
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -68,7 +69,7 @@ include('verifica_session.php');
       <thead>
         <tr>
           <th scope="col" class="text-center">ID</th>
-          <th scope="col" class="text-center">Número Serial</th>N
+          <th scope="col" class="text-center">Número Serial</th>
           <th scope="col" class="text-center">Modelo</th>
           <th scope="col" class="text-center">Fabricante</th>
           <th scope="col" class="text-center">Data Cadastro</th>

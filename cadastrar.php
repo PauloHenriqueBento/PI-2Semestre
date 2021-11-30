@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("app/confbkp.php");
+include("app/conflogin.php");
 
 $username = mysqli_real_escape_string($mysqli, trim($_POST['username']));
 $password = mysqli_real_escape_string($mysqli, trim(md5($_POST['password'])));

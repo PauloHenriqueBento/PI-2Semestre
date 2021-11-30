@@ -33,7 +33,9 @@ include('verifica_session.php');
                 </div>
 
                 <div class="collapse navbar-collapse d-flex justify-content-end position-absolute end-0 me-5" id="expandir">
-                    <button class="btn btn-secondary text-white">Logout</button>
+                    <form action="logout.php">
+                        <button type="submit" class="btn btn-secondary text-white">Logout</button>
+                    </form>
                 </div>
             </div>
         </nav>

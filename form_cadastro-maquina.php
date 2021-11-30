@@ -53,7 +53,9 @@ session_start();
                         </div>
                     </div>
                     <div class="collapse navbar-collapse d-flex justify-content-end ms-1 me-2" id="expandir">
-                        <button class="btn btn-secondary text-white">Logout</button>
+                        <form action="logout.php">
+                            <button type="submit" class="btn btn-secondary text-white">Logout</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -64,11 +66,8 @@ session_start();
     <h2 class="d-flex justify-content-center mt-4">Cadastro Máquinas</h2>
         <form method="post" action="cadastrar-maquina.php" class="pt-3">
             <label for="serial" class="mt-1">Número de serial</label>
-<<<<<<< HEAD
-            <input class="form-control p-2 inputs" id="serial" type="text" required></input>
-=======
+
             <input class="form-control p-2 inputs" type="number" name="serial" id="serial" required></input>
->>>>>>> origin/Cadastro-maquinas
 
             <section class="row">
                 <div class="col">
@@ -100,10 +99,10 @@ session_start();
                 </div>
             </section>
 
-            <section class="form-floating mt-3">
-                <label for="observacoes">Observações</label>
+            <div class="form-floating mt-3">
+                <label for="observacoes" class="form-label">Observações</label>
                 <textarea class="form-control inputs obs" name="observacoes" id="observacoes"></textarea>
-            </section>
+            </div>
 
             <div class="d-flex justify-content-center">
             <button type="submit" class="btn text-white p-2 mt-5 mb-3 btn-lg botao">Enviar</button>
