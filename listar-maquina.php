@@ -6,7 +6,7 @@ $sql = 'SELECT id, serial, modelo, fabricante, data, sistema_operacional, observ
 $_GET['apagado'] = $_GET['apagado'] ?? false;
 
 if($_GET['apagado'] == 1) {
-    echo "<font color = green> Apagado com sucesso</font>";
+    echo "<font color = red> Apagado com sucesso</font>";
 }
 
 $_GET['gravado'] = $_GET['gravado'] ?? false;
@@ -16,22 +16,32 @@ if($_GET['gravado'] == 1) {
 } 
 
 echo '<form action ="apagar-maquina.php" method="post">
-<table border="1" class="table table-striped table-hover">
-<tr>
-    <th>Serial</th><th>Modelo</th><th>Fabricante</th><th>Data</th><th>Sistema Operacional</th><th>Observacoes</th>
-<tr>';
+<table class="table border tabela container-sm mt-5">
+    <tr>
+        <thead>
+            <th class="text-center">Número Serial</th>
+            <th class="text-center">Modelo</th>
+            <th class="text-center">Fabricante</th>
+            <th class="text-center">Data</th>
+            <th class="text-center">Sistema Operacional</th>
+            <th class="text-center">Observações</th>
+            <th class="text-center">Editar</th>
+            <th class="text-center">Apagar</th>
+        </thead>
+    <tr>';
 
-foreach($bd->query($sql) as $registro) {
-    echo "<tr>
-                <td>{$registro['serial']}</td>
-                <td>{$registro['modelo']}</td>
-                <td>{$registro['fabricante']}</td>
-                <td>{$registro['data']}</td>
-                <td>{$registro['sistema_operacional']}</td>
-                <td>{$registro['observacoes']}</td>
-                <td><button name='apagar' value='{$registro['id']}'>apagar</button><td>
-        </tr>";
-}
+    foreach($bd->query($sql) as $registro) {
+        echo "<tr>
+                    <td class='border text-center'>{$registro['serial']}</td>
+                    <td class='border text-center'>{$registro['modelo']}</td>
+                    <td class='border text-center'>{$registro['fabricante']}</td>
+                    <td class='border text-center'>{$registro['data']}</td>
+                    <td class='border text-center'>{$registro['sistema_operacional']}</td>
+                    <td class='border text-center'>{$registro['observacoes']}</td>
+                    <td class='border text-center'><button class='btn btn-secondary' name='editar' value='{$registro['id']}'>Editar</button></td>
+                    <td class='border text-center'><button class='btn btn-danger' name='apagar' value='{$registro['id']}'>apagar</button></td>
+            </tr>";
+    }
 
 echo '</table>
     </form>';

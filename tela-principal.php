@@ -2,6 +2,7 @@
 session_start();
 include('verifica_session.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,25 +23,9 @@ include('verifica_session.php');
     <link rel="stylesheet" href="style/usuario-cadastradoo.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm menu">
-            <div class="container-sm position-relative">
-                <div class="div-logo">
-                    <a class="navbar-brand" href="#"><img src="image/logo.png" class="logo"></a>
-                    <div class="div-titulo align-middle me-3">
-                        <h1 class="text-white">Active</h1>
-                    </div>
-                </div>
-
-                <div class="collapse navbar-collapse d-flex justify-content-end position-absolute end-0 me-5" id="expandir">
-                    <form action="logout.php">
-                        <button type="submit" class="btn btn-secondary text-white">Logout</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <?php include ("./navbar.php"); ?>
     <main class="container">
+
         <div class="div-lateral mt-5">
             <div class="mt-5">
                 <h2 class="fs-4 text-center">
@@ -54,7 +39,8 @@ include('verifica_session.php');
                 </div>
             </div>
         </div>
-        <div class="div-central ms-5 mt-5">
+        <div class="div-central ms-5 mt-1">
+            <!--
             <div class="row text-center">
                 <div class="col  border ms-3 div-opcoes">
                     <div class="mt-5">
@@ -74,23 +60,24 @@ include('verifica_session.php');
                     </div>
                 </div>
             </div>
+            -->
             
             <div class="row mt-5 text-center">
                 <div class="col border ms-3 div-opcoes">
                     <div class="mt-5">
-                        <a href="form_cadastro.php"><img src="image/cadastrar-maq.png" class="icon"></a>
+                        <a href="form_cadastro-maquina.php"><img src="image/cadastrar-maq.png" class="icon"></a>
                     </div>
                     <div class="mt-4">
-                        <button class="botao"><a href="form_cadastro.php" class="link-dark  text-white">Cadastrar Máquina</a></button>
+                        <button class="botao"><a href="form_cadastro-maquina.php" class="link-dark  text-white">Cadastrar Máquina</a></button>
                     </div>
                 </div>
 
                 <div class="col border ms-5 div-opcoes">
                     <div class="mt-5">
-                        <a href="form_cadastro.php"><img src="image/mostrar-maq.png" class="icon"></a>
+                        <a href="maquina-cadastrado.php"><img src="image/mostrar-maq.png" class="icon"></a>
                     </div>
                     <div class="mt-4">
-                        <button class="botao"><a href="form_cadastro.php" class="link-dark  text-white">Mostrar Máquina</a></button>
+                        <button class="botao"><a href="maquina-cadastrado.php" class="link-dark  text-white">Mostrar Máquina</a></button>
                     </div>
                 </div>
             </div>

@@ -20,7 +20,8 @@ $valores[':sistema_operacional'] = $_POST['sistema_operacional'];
 $valores[':observacoes'] = $_POST['observacoes'];
 
 if($stmt->execute($valores)){
-    header('Location: listar-maquina.php?gravado=1');
+    /*header('Location: listar-maquina.php?gravado=1');*/
+    header('Location: usuario-cadastrado.php?gravado=1');
 } else {
     echo "<br><br> Erro, Nao consegui gravar no banco";
 }
