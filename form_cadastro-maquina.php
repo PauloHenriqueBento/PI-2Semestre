@@ -1,6 +1,6 @@
 <?php
 session_start();
-//include('verifica_session.php');
+include('verifica_session.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

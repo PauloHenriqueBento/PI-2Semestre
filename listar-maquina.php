@@ -6,19 +6,25 @@ $sql = 'SELECT id, serial, modelo, fabricante, data, sistema_operacional, observ
 $_GET['apagado'] = $_GET['apagado'] ?? false;
 
 if($_GET['apagado'] == 1) {
-    echo "<font color = red> Apagado com sucesso</font>";
+    echo '  <div class="alert alert-success text-center" role="alert">
+                Apagado com Sucesso!
+            </div>';
 }
 
 $_GET['gravado'] = $_GET['gravado'] ?? false;
 
 if($_GET['gravado'] == 1) {
-    echo "<font color = green> Gravado com sucesso</font>";
+
+    echo '  <div class="alert alert-success text-center" role="alert">
+                Gravado com Sucesso!
+            </div>';
 } 
 
 echo '<form action ="apagar-maquina.php" method="post">
 <table class="table border tabela container-sm mt-5">
     <tr>
         <thead>
+            <th class="text-center">ID</th>
             <th class="text-center">Número Serial</th>
             <th class="text-center">Modelo</th>
             <th class="text-center">Fabricante</th>
@@ -31,7 +37,8 @@ echo '<form action ="apagar-maquina.php" method="post">
     <tr>';
 
     foreach($bd->query($sql) as $registro) {
-        echo "<tr>
+        echo "  <tr>
+                    <td class='border text-center'>{$registro['id']}</td>
                     <td class='border text-center'>{$registro['serial']}</td>
                     <td class='border text-center'>{$registro['modelo']}</td>
                     <td class='border text-center'>{$registro['fabricante']}</td>
@@ -40,7 +47,7 @@ echo '<form action ="apagar-maquina.php" method="post">
                     <td class='border text-center'>{$registro['observacoes']}</td>
                     <td class='border text-center'><a class='btn btn-secondary' name='editar' value='{$registro['id']}' href='form_edita-maquina.php?id={$registro['id']}'>Editar</a></td>
                     <td class='border text-center'><button class='btn btn-danger' name='apagar' value='{$registro['id']}'>apagar</button></td>
-            </tr>";
+                </tr>";
     }
 
 echo '</table>

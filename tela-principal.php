@@ -19,7 +19,7 @@ include('verifica_session.php');
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/cadastro-maquina.css">
-    <link rel="stylesheet" href="style/telaPrincipal.css">
+    <link rel="stylesheet" href="style/telaPrincipall.css">
     <link rel="stylesheet" href="style/usuario-cadastradoo.css">
 </head>
 <body>
@@ -39,7 +39,7 @@ include('verifica_session.php');
                 </div>
             </div>
         </div>
-        <div class="div-central ms-5 mt-1">
+        <div class="div-central ms-5">
             <!--
             <div class="row text-center">
                 <div class="col  border ms-3 div-opcoes">

@@ -65,7 +65,7 @@ include('verifica_session.php');
             <td class="border"></td>
             <td class="border text-center"><a href="#"><img src="image/editar.png" class="modificar"></img></a></td>
             <td class="border text-center"><a href="#"><img src="image/excluir.png" class="modificar"></img></a></td>
--->
+          -->
           </tr>
       </tbody>
     </table>  
