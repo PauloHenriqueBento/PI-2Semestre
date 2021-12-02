@@ -38,7 +38,7 @@ echo '<form action ="apagar-maquina.php" method="post">
                     <td class='border text-center'>{$registro['data']}</td>
                     <td class='border text-center'>{$registro['sistema_operacional']}</td>
                     <td class='border text-center'>{$registro['observacoes']}</td>
-                    <td class='border text-center'><button class='btn btn-secondary' name='editar' value='{$registro['id']}'>Editar</button></td>
+                    <td class='border text-center'><a class='btn btn-secondary' name='editar' value='{$registro['id']}' href='form_edita-maquina.php?id={$registro['id']}'>Editar</a></td>
                     <td class='border text-center'><button class='btn btn-danger' name='apagar' value='{$registro['id']}'>apagar</button></td>
             </tr>";
     }

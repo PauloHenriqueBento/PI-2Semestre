@@ -17,10 +17,18 @@ include('header.php');
                     endif;
                     unset($_SESSION['status_cadastro']);
                     ?>
-
+                    
+                    <?php 
+                        if(isset($_SESSION['usuario_existe'])):
+                    ?>
                     <div class="alert alert-danger" role="alert">
                         Usuário já existe
                     </div>
+                    <?php
+                        endif;
+                        unset($_SESSION['usuario_existe']);
+                    ?>
+
                     <?php 
                         if(isset($_SESSION['senhas_diferem'])):
                     ?>

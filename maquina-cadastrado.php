@@ -24,6 +24,16 @@ include('verifica_session.php');
   <body>
     <?php include ("./navbar.php"); ?>
     <h2 class="text-center mt-5">Informações Máquinas</h2>
+    <?php 
+        if(isset($_SESSION['status_atualizado'])):
+    ?>
+    <div class="alert alert-success text-center" role="alert">
+        Maquina atualizada!
+    </div>
+    <?php
+        endif;
+        unset($_SESSION['status_atualizado']);
+    ?>
 
     <table class="table border tabela container-sm mt-5">
     <!--  
