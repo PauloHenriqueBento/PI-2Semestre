@@ -2,7 +2,6 @@
 //session_start();
 include("app/conf.php");
 
-$_POST['id'] = $_POST['id'] ?? '';
 $_POST['serial'] = $_POST['serial'] ?? '';
 $_POST['modelo'] = $_POST['modelo'] ?? '';
 $_POST['fabricante'] = $_POST['fabricante'] ?? '';
@@ -10,10 +9,9 @@ $_POST['data'] = $_POST['data'] ?? '';
 $_POST['sistema_operacional'] = $_POST['sistema_operacional'] ?? '';
 $_POST['observacoes'] = $_POST['observacoes'] ?? '';
 
-$stmt = $bd->prepare("INSERT INTO maquinas (id, serial, modelo, fabricante, data, sistema_operacional, observacoes)
-         VALUES (:id, :serial, :modelo, :fabricante, :data, :sistema_operacional, :observacoes)");
+$stmt = $bd->prepare("INSERT INTO maquinas (serial, modelo, fabricante, data, sistema_operacional, observacoes)
+         VALUES (:serial, :modelo, :fabricante, :data, :sistema_operacional, :observacoes)");
 
-$valores[':id'] = $_POST['id'];
 $valores[':serial'] = $_POST['serial'];
 $valores[':modelo'] = $_POST['modelo'];
 $valores[':fabricante'] = $_POST['fabricante'];
